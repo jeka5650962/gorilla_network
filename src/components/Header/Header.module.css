@@ -1,0 +1,43 @@
+/* ----------------------------------------------------------------------------------------------------------- header */
+.header {
+    grid-area: header;
+    padding: 20px 0 10px 0;
+    display: flex;
+    align-items: center;
+}
+.header__logo {
+    flex: 0 0 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.header__logo img {
+    max-width: 100%;
+    display: block;
+}
+.header__title {
+    font-family: 'Permanent Marker', cursive, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 26px;
+    color: #599650;
+    margin: 0 0 0 20px;
+}
+.header__menu {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.header__list {
+    display: flex;
+}
+.header__list li {
+    margin: 0 0 0 30px;
+}
+.header__link {
+    color: #d9d9d9;
+    font-size: 16px;
+    transition: color 0.3s ease 0s;
+}
+.header__link:hover {
+    color: #599650;
+}
+/* --------------------------------------------------------------------------------------- бургер */
+.header__burger {}
