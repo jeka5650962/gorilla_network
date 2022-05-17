@@ -1,0 +1,9 @@
+.header__logo {
+    flex: 0 0 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.header__logo img {
+    max-width: 100%;
+    display: block;
+}
