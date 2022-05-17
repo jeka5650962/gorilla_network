@@ -1,0 +1,9 @@
+.profileMessage__likes {}
+.profileMessage__likes::before {
+    content: 'Likes';
+    margin: 0 10px 0 0;
+}
+.profileMessage__likes span {
+    font-weight: 600;
+    color: #fff;
+}

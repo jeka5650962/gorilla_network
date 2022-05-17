@@ -1,0 +1,8 @@
+.profileMessage__text {
+    margin: 0 0 15px 0;
+}
+.profileMessage__text p {
+    margin: 0 0 10px 0;
+    line-height: 1.3;
+    color: rgba(255, 255, 255, 0.7);
+}

@@ -1,9 +1,10 @@
+.profileWrapper {}
 /* ------------------------------------------------------------------ profile */
 .profile {
     border-radius: 15px;
     border: 1px solid #3c424b;
     overflow: hidden;
-    margin: 0 0 20px 0;
+    margin: 0 0 50px 0;
     background-color: #161b22;
 }
 .profile__image {

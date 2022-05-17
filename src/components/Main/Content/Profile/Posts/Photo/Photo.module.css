@@ -1,0 +1,9 @@
+.profileInfo__photo {
+    flex: 0 0 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profileInfo__photo img {
+    max-width: 100%;
+    display: block;
+}
