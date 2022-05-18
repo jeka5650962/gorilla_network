@@ -1,26 +1,24 @@
 /* -------------------------------------------------------------------------------------- sidebar */
 .sidebar {}
-.sidebar__menu {
-    background-color: #161b22;
-    border-radius: 15px;
+.sidebar__menu {}
+.sidebar__list {}
+.sidebar__item {
+    margin: 0 0 5px 0;
+    padding: 10px;
 }
-.sidebar__list {
-    padding: 20px;
-}
-.sidebar__list li {
-    margin: 0 0 15px 0;
-}
-.sidebar__list li:last-child {
+.sidebar__item:last-child {
     margin: 0;
 }
+.sidebar__item:hover {
+    background-color: #3c424b;
+    border-radius: 10px;
+}
 .sidebar__link {
+    display: block;
     color: #fff;
     transition: color 0.3s ease 0s;
 }
 .sidebar__link.active {
     color: #599650;
     font-weight: 700;
-}
-.sidebar__link:hover {
-    color: #599650;
 }
