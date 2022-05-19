@@ -14,7 +14,7 @@ const Post = () => {
             </div>
             <div className={`${style.post__profileMessage} ${style.profileMessage}`}>
                 <MessageProfile/>
-                <Likes/>
+                <Likes likesCount="1988"/>
             </div>
         </div>
     );

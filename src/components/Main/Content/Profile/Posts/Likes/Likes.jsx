@@ -1,10 +1,11 @@
 import React from "react";
 import style from "./Likes.module.css";
 
-const Likes = () => {
+const Likes = (props) => {
+    console.log(props.likesCount);
     return (
         <div className={style.profileMessage__likes}>
-            <span>2432</span>
+            <span>{props.likesCount}</span>
         </div>
     );
 };
