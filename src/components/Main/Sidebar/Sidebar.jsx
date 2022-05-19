@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./Sidebar.module.css";
+import {NavLink} from "react-router-dom";
 
 const Sidebar = () => {
     return (
@@ -7,16 +8,17 @@ const Sidebar = () => {
             <nav className={style.sidebar__menu}>
                 <ul className={style.sidebar__list}>
                     <li className={style.sidebar__item}>
-                        <a href="/profile" className={`${style.sidebar__link} ${style.active}`}>Profile</a>
+                        <NavLink to="/profile"
+                                 className={`${style.sidebar__link} ${style.active}`}>Profile</NavLink>
                     </li>
                     <li className={style.sidebar__item}>
-                        <a href="/messages" className={style.sidebar__link}>Messages</a>
+                        <NavLink to="/messages" className={style.sidebar__link}>Messages</NavLink>
                     </li>
                     <li className={style.sidebar__item}>
-                        <a href="/news" className={style.sidebar__link}>News</a>
+                        <NavLink to="/news" className={style.sidebar__link}>News</NavLink>
                     </li>
                     <li className={style.sidebar__item}>
-                        <a href="/music" className={style.sidebar__link}>Music</a>
+                        <NavLink to="/music" className={style.sidebar__link}>Music</NavLink>
                     </li>
                 </ul>
             </nav>
