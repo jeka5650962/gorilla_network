@@ -13,13 +13,94 @@
 }
 .messages__mainInfo {
     flex: 1 1 800px;
-    margin: 0 0 30px 0;
-    display: flex;
-    flex-direction: column-reverse;
 }
-/* ---------------------------------------------------------------- ↓ message */
-.message {}
-.message__profileImage {}
-.message__profileName {}
-/* ---------------------------------------------------------------- ↑ message */
-.messages__bottomInfo {}
+.message {
+    display: flex;
+}
+.message__left {
+    flex: 0 0 300px;
+}
+.message__leftItem {
+    display: flex;
+    align-items: flex-start;
+    align-self: flex-start;
+    border-radius: 15px;
+    border: 1px solid #3c424b;
+    overflow: hidden;
+    background-color: #161b22;
+    padding: 10px;
+    margin: 0 20px 10px 0;
+}
+.message__profilePhoto {
+    flex: 0 0 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 10px 0 0;
+}
+.message__profilePhoto img {
+    max-width: 100%;
+}
+.message__profileInfo {
+    flex: 1 1 auto;
+}
+.message__nameAndDate {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin: 0 0 10px 0;
+}
+.message__name {}
+.message__date {}
+.message__lastMessage {
+    font-size: 14px;
+    line-height: 1.3;
+    color: rgba(255, 255, 255, 0.7);
+}
+.message__right {
+    flex: 1 1 auto;
+    border-left: 1px solid #3c424b;
+    padding: 10px 10px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.message__sentMessages {}
+.message__items {}
+.message__item {
+    margin: 0 0 20px 0;
+    font-size: 16px;
+    line-height: 1.3;
+}
+.message__writeMessage {
+    display: flex;
+    flex-direction: column;
+}
+.message__textarea {
+    margin: 0 0 10px 0;
+}
+.message__textarea textarea {
+    min-height: 100px;
+    width: 100%;
+    resize: vertical;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #3c424b;
+    background-color: #161b22;
+    color: #fff;
+}
+.message__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 15%;
+    background-color: #3c424b;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+}
+.message__button:hover {
+    background-color: #599650;
+}
