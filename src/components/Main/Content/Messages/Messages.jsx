@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./Messages.module.scss";
+import {NavLink} from "react-router-dom";
 
 const Messages = () => {
     return (
@@ -8,38 +9,38 @@ const Messages = () => {
                 <div className={style.messages__topInfo}>Messaging</div>
                 <div className={`${style.messages__mainInfo} ${style.message}`}>
                     <div className={style.message__left}>
-                        <div className={style.message__leftItem}>
+                        <NavLink to="/messages/kuzin" className={navData => navData.isActive ? style.active : style.message__leftItem}>
                             <div className={style.message__profilePhoto}>
                                 <img
-                                    src="https://media-exp1.licdn.com/dms/image/C4D03AQGP5l7bQHqE6A/profile-displayphoto-shrink_200_200/0/1633726581090?e=1657756800&v=beta&t=fISZxc6Jmt1lC2p18tlw-FUiEIVCVNojRFLR98C8y_o"
+                                    src="https://media-exp1.licdn.com/dms/image/C4E03AQFkejP4VJ9jtw/profile-displayphoto-shrink_200_200/0/1580923016915?e=1658361600&v=beta&t=6BpIL7n1naN211Ijjrx0XvbFS7-iJQcbqKKojvHmjNg"
                                     alt="Photo"/>
                             </div>
                             <div className={style.message__profileInfo}>
                                 <div className={style.message__nameAndDate}>
-                                    <div className={style.message__name}>Yauheni Salish</div>
+                                    <div className={style.message__name}>Kirill Kuzin</div>
                                     <div className={style.message__date}>May 20</div>
                                 </div>
                                 <div className={style.message__lastMessage}>
                                     Here is the last message preview...
                                 </div>
                             </div>
-                        </div>
-                        <div className={style.message__leftItem}>
+                        </NavLink>
+                        <NavLink to="/messages/pul" className={navData => navData.isActive ? style.active : style.message__leftItem}>
                             <div className={style.message__profilePhoto}>
                                 <img
-                                    src="https://media-exp1.licdn.com/dms/image/C4D03AQGP5l7bQHqE6A/profile-displayphoto-shrink_200_200/0/1633726581090?e=1657756800&v=beta&t=fISZxc6Jmt1lC2p18tlw-FUiEIVCVNojRFLR98C8y_o"
+                                    src="https://media-exp1.licdn.com/dms/image/C5603AQH-C_MVqmnmvg/profile-displayphoto-shrink_200_200/0/1572968995389?e=1658361600&v=beta&t=Bb9-1k3qEYL-pv8RY0_3WAkEAq7SbQvJ2Qq8nJJNmYY"
                                     alt="Photo"/>
                             </div>
                             <div className={style.message__profileInfo}>
                                 <div className={style.message__nameAndDate}>
-                                    <div className={style.message__name}>Yauheni Salish</div>
-                                    <div className={style.message__date}>May 20</div>
+                                    <div className={style.message__name}>Slava Pul</div>
+                                    <div className={style.message__date}>June 12</div>
                                 </div>
                                 <div className={style.message__lastMessage}>
                                     Here is the last message preview...
                                 </div>
                             </div>
-                        </div>
+                        </NavLink>
                     </div>
                     <div className={style.message__right}>
                         <div className={style.message__sentMessages}>

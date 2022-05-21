@@ -2,11 +2,6 @@
     &__menu {}
     &__list {}
     &__item {
-        margin: 0 0 5px 0;
-        padding: 10px;
-        &:last-child {
-            margin: 0;
-        }
         &:hover {
             background-color: #3c424b;
             border-radius: 10px;
@@ -16,9 +11,13 @@
         display: block;
         color: #fff;
         transition: color 0.3s ease 0s;
+        padding: 10px;
     }
 }
 .active {
+    display: block;
+    transition: color 0.3s ease 0s;
     color: #599650;
     font-weight: 700;
+    padding: 10px;
 }
