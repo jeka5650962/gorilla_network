@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./Post.module.css";
+import style from "./Post.module.scss";
 import MessageProfile from "./MessageProfile/MessageProfile";
 import Likes from "./Likes/Likes";
 import PostProfileInfo from "./PostProfileInfo/PostProfileInfo";

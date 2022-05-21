@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./LogoMenu.module.css";
+import style from "./LogoMenu.module.scss";
 
 const LogoMenu = () => {
     return (

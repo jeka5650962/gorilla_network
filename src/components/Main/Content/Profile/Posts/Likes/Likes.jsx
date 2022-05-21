@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./Likes.module.css";
+import style from "./Likes.module.scss";
 
 const Likes = (props) => {
     console.log(props.likesCount);

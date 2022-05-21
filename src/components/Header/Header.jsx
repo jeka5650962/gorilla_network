@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./Header.module.css";
+import style from "./Header.module.scss";
 import Logo from "./Logo/Logo";
 import LogoMenu from "./LogoMenu/LogoMenu";
 

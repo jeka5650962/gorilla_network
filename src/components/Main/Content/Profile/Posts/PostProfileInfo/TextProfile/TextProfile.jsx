@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./TextProfile.module.css";
+import style from "./TextProfile.module.scss";
 
 const TextProfile = () => {
     return (

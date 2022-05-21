@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./Content.module.css";
+import style from "./Content.module.scss";
 import Profile from "./Profile/Profile";
 import Messages from "./Messages/Messages";
 import News from "./News/News";

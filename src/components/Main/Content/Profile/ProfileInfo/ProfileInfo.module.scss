@@ -1,0 +1,41 @@
+.profile {
+    border-radius: 15px;
+    border: 1px solid #3c424b;
+    overflow: hidden;
+    margin: 0 0 50px 0;
+    background-color: #161b22;
+    &__image {
+        height: 200px;
+        background: url("https://www.rentallscript.com/blog/wp-content/uploads/2021/06/React.js-and-its-benefits.png") center / cover no-repeat;
+    }
+    &__info {
+        padding: 0 30px;
+        display: flex;
+        margin: 0 0 -30px 0;
+    }
+    &__avatar {
+        flex: 0 0 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        top: -50px;
+        left: 0;
+        border: 3px solid #8a8a8a;
+        img {
+            max-width: 100%;
+            display: block;
+        }
+    }
+    &__text {
+        padding: 0 30px 30px 30px;
+    }
+    &__name {
+        font-size: 24px;
+        line-height: 1.5;
+        font-weight: 600;
+    }
+    &__description {
+        color: #8a8a8a;
+        line-height: 1.5;
+    }
+}

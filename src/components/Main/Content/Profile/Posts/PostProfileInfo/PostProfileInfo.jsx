@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./PostProfileInfo.module.css";
+import style from "./PostProfileInfo.module.scss";
 import Photo from "./Photo/Photo";
 import TextProfile from "./TextProfile/TextProfile";
 
