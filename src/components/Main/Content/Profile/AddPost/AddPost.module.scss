@@ -18,6 +18,10 @@
             border: 1px solid #3c424b;
             background-color: #161b22;
             color: #fff;
+            transition: border 0.3s ease 0s;
+            &:focus {
+                border: 1px solid #599650;
+            }
         }
     }
     &__button {

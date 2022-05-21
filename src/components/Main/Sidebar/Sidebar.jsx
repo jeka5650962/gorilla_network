@@ -8,17 +8,16 @@ const Sidebar = () => {
             <nav className={style.sidebar__menu}>
                 <ul className={style.sidebar__list}>
                     <li className={style.sidebar__item}>
-                        <NavLink to="/profile"
-                                 className={`${style.sidebar__link} ${style.active}`}>Profile</NavLink>
+                        <NavLink to="/profile" className = {navData => navData.isActive ? style.active : style.sidebar__link}>Profile</NavLink>
                     </li>
                     <li className={style.sidebar__item}>
-                        <NavLink to="/messages" className={style.sidebar__link}>Messages</NavLink>
+                        <NavLink to="/messages" className = {navData => navData.isActive ? style.active : style.sidebar__link}>Messages</NavLink>
                     </li>
                     <li className={style.sidebar__item}>
-                        <NavLink to="/news" className={style.sidebar__link}>News</NavLink>
+                        <NavLink to="/news" className = {navData => navData.isActive ? style.active : style.sidebar__link}>News</NavLink>
                     </li>
                     <li className={style.sidebar__item}>
-                        <NavLink to="/music" className={style.sidebar__link}>Music</NavLink>
+                        <NavLink to="/music" className = {navData => navData.isActive ? style.active : style.sidebar__link}>Music</NavLink>
                     </li>
                 </ul>
             </nav>
