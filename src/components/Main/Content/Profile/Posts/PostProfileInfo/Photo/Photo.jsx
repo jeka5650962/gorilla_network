@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Photo.module.scss";
-import avaImg from "../../../ProfileInfo/ava.jpg";
+import avaImg from "../../../ProfileInfo/images/ava.jpg";
 
 const Photo = () => {
     return (

@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./ProfileInfo.module.scss";
-import avaImg from "./ava.jpg";
+import avaImg from "./images/ava.jpg";
 
 const ProfileInfo = () => {
     return (
