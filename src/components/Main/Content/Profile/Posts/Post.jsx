@@ -4,13 +4,14 @@ import MessageProfile from "./MessageProfile/MessageProfile";
 import Likes from "./Likes/Likes";
 import PostProfileInfo from "./PostProfileInfo/PostProfileInfo";
 
-const Post = () => {
+// ----------------------------------------------------------------------------------------------------- компонента Post
+const Post = (props) => {
     return (
         <div className={style.post}>
             <PostProfileInfo/>
             <div className={`${style.post__profileMessage} ${style.profileMessage}`}>
-                <MessageProfile/>
-                <Likes/>
+                <MessageProfile postMessage={props.postMessage}/>
+                <Likes likesCount={props.likesCount}/>
             </div>
         </div>
     );

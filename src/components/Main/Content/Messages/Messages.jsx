@@ -2,6 +2,8 @@ import React from "react";
 import style from "./Messages.module.scss";
 import {NavLink} from "react-router-dom";
 // ---------------------------------------------------------------------------------------------------------------- Data
+
+// ----------------------------------------------------------------------------- messagingPersonData
 let messagingPersonData = [
     {
         id: "kuzin",
@@ -18,7 +20,7 @@ let messagingPersonData = [
         lastMessage: "Here is the last message preview... Second",
     },
 ];
-
+// ---------------------------------------------------------------------------- messagingMessageData
 let messagingMessageData = [
     {
         message: "1. Cras accumsan accumsan hendrerit. Fusce feugiat metus dictum eros aliquet aliquam. Nulla facilisi. Proin euismod.",
