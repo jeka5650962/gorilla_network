@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./Messages.module.scss";
-import {NavLink} from "react-router-dom";
+import MessagingPerson from "./MessagingPerson/MessagingPerson";
+import MessagingMessage from "./MessagingMessage/MessagingMessage";
 
 const Messages = () => {
     return (
@@ -9,62 +10,30 @@ const Messages = () => {
                 <div className={style.messages__topInfo}>Messaging</div>
                 <div className={`${style.messages__mainInfo} ${style.message}`}>
                     <div className={style.message__left}>
-                        <NavLink to="/messages/kuzin" className={navData => navData.isActive ? style.active : style.message__leftItem}>
-                            <div className={style.message__profilePhoto}>
-                                <img
-                                    src="https://media-exp1.licdn.com/dms/image/C4E03AQFkejP4VJ9jtw/profile-displayphoto-shrink_200_200/0/1580923016915?e=1658361600&v=beta&t=6BpIL7n1naN211Ijjrx0XvbFS7-iJQcbqKKojvHmjNg"
-                                    alt="Photo"/>
-                            </div>
-                            <div className={style.message__profileInfo}>
-                                <div className={style.message__nameAndDate}>
-                                    <div className={style.message__name}>Kirill Kuzin</div>
-                                    <div className={style.message__date}>May 20</div>
-                                </div>
-                                <div className={style.message__lastMessage}>
-                                    Here is the last message preview...
-                                </div>
-                            </div>
-                        </NavLink>
-                        <NavLink to="/messages/pul" className={navData => navData.isActive ? style.active : style.message__leftItem}>
-                            <div className={style.message__profilePhoto}>
-                                <img
-                                    src="https://media-exp1.licdn.com/dms/image/C5603AQH-C_MVqmnmvg/profile-displayphoto-shrink_200_200/0/1572968995389?e=1658361600&v=beta&t=Bb9-1k3qEYL-pv8RY0_3WAkEAq7SbQvJ2Qq8nJJNmYY"
-                                    alt="Photo"/>
-                            </div>
-                            <div className={style.message__profileInfo}>
-                                <div className={style.message__nameAndDate}>
-                                    <div className={style.message__name}>Slava Pul</div>
-                                    <div className={style.message__date}>June 12</div>
-                                </div>
-                                <div className={style.message__lastMessage}>
-                                    Here is the last message preview...
-                                </div>
-                            </div>
-                        </NavLink>
+                        <MessagingPerson id="kuzin"
+                                         name="Kirill Kuzin"
+                                         date="May 20"
+                                         urlPhoto="https://media-exp1.licdn.com/dms/image/C4E03AQFkejP4VJ9jtw/profile-displayphoto-shrink_200_200/0/1580923016915?e=1658361600&v=beta&t=6BpIL7n1naN211Ijjrx0XvbFS7-iJQcbqKKojvHmjNg"
+                                         lastMessage="Here is the last message preview... First"
+                        />
+                        <MessagingPerson id="pul"
+                                         name="Slava Pul"
+                                         date="June 12"
+                                         urlPhoto="https://media-exp1.licdn.com/dms/image/C5603AQH-C_MVqmnmvg/profile-displayphoto-shrink_200_200/0/1572968995389?e=1658361600&v=beta&t=Bb9-1k3qEYL-pv8RY0_3WAkEAq7SbQvJ2Qq8nJJNmYY"
+                                         lastMessage="Here is the last message preview... Second"
+                        />
                     </div>
                     <div className={style.message__right}>
                         <div className={style.message__sentMessages}>
-                            <div className={style.message__items}>
-                                <div className={style.message__item}>
-                                    Sodales amet, id cras dictum. Non pellentesque lectus amet in mollis dui nec in in
-                                    quam,
-                                    odio. Luctus tempus cursu.
-                                </div>
-                            </div>
-                            <div className={style.message__items}>
-                                <div className={style.message__item}>
-                                    Sodales amet, id cras dictum. Non pellentesque lectus amet in mollis dui nec in in
-                                    quam,
-                                    odio. Luctus tempus cursu.
-                                </div>
-                            </div>
-                            <div className={style.message__items}>
-                                <div className={style.message__item}>
-                                    Sodales amet, id cras dictum. Non pellentesque lectus amet in mollis dui nec in in
-                                    quam,
-                                    odio. Luctus tempus cursu.
-                                </div>
-                            </div>
+                            <MessagingMessage
+                                message="Организации, активности рост и заданий идейные модель интересный собой рамки реализация требуют организационной задача"
+                            />
+                            <MessagingMessage
+                                message="Идейные условий способствует а и порядка, дальнейших заданий и важную нашей позиций, нашей способствует постоянны"
+                            />
+                            <MessagingMessage
+                                message="От деятельности плановых сложившаяся порядка, постоянный количественный организации, повседневная кадров позиций, способствует повседневная задач. Направлени"
+                            />
                         </div>
                         <div className={style.message__writeMessage}>
                             <div className={style.message__textarea}>

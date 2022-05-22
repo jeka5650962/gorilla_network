@@ -4,7 +4,9 @@ import style from "./Music.module.scss";
 const Music = () => {
     return (
         <div className={style.music}>
-            Music
+            <div className={style.music__text}>
+                Music
+            </div>
         </div>
     );
 };
