@@ -41,7 +41,14 @@ const Messages = () => {
         {
             message: "3. Morbi dictum vehicula ante bibendum semper. Praesent non nisi iaculis, efficitur neque non, tincidunt sem.",
         },
+        {
+            message: "4. Suspendisse mattis commodo dignissim. Quisque consequat leo aliquet ex hendrerit, quis vehicula lectus gravida. Aliquam.",
+        },
     ];
+    let messagingMessageElements = messagingMessageData.map(mmd =>
+        <MessagingMessage
+            message={mmd.message}
+        />);
 
     return (
         <div className={style.messages}>
@@ -53,15 +60,7 @@ const Messages = () => {
                     </div>
                     <div className={style.message__right}>
                         <div className={style.message__sentMessages}>
-                            <MessagingMessage
-                                message={messagingMessageData[0].message}
-                            />
-                            <MessagingMessage
-                                message={messagingMessageData[1].message}
-                            />
-                            <MessagingMessage
-                                message={messagingMessageData[2].message}
-                            />
+                            {messagingMessageElements}
                         </div>
                         <div className={style.message__writeMessage}>
                             <div className={style.message__textarea}>

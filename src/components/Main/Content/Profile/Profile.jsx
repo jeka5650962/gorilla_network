@@ -3,27 +3,35 @@ import style from "./Profile.module.scss";
 import AddPost from "./AddPost/AddPost";
 import Post from "./Posts/Post";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
-// ---------------------------------------------------------------------------------------------------------------- Data
 
-// ---------------------------------------------------------------------------------------- postData
-let postData = [
-    {
-        postMessage: "First post. Quisque leo urna, vulputate eget ipsum non, dignissim elementum lectus.",
-        likesCount: 1988,
-    },
-    {
-        postMessage: "Second post. Aliquam feugiat vestibulum tortor, non sagittis sem tempus at. Nulla.",
-        likesCount: 2022,
-    },
-];
-// -------------------------------------------------------------------------------------------------- компонента Profile
 const Profile = () => {
+
+    // ---------------------------------------------------------------------------------------- postData
+    let postData = [
+        {
+            postMessage: "First post. Quisque leo urna, vulputate eget ipsum non, dignissim elementum lectus.",
+            likesCount: 1988,
+        },
+        {
+            postMessage: "Second post. Aliquam feugiat vestibulum tortor, non sagittis sem tempus at. Nulla.",
+            likesCount: 2022,
+        },
+        {
+            postMessage: "Third post. Vestibulum maximus eu erat vel venenatis. Praesent mattis vulputate risus.",
+            likesCount: 8,
+        },
+    ];
+    let postElements = postData.map(pd =>
+        <Post
+            postMessage={pd.postMessage}
+            likesCount={pd.likesCount}
+        />)
+
     return (
         <div className={style.profileWrapper}>
             <ProfileInfo/>
             <AddPost/>
-            <Post postMessage={postData[0].postMessage} likesCount={postData[0].likesCount}/>
-            <Post postMessage={postData[1].postMessage} likesCount={postData[1].likesCount}/>
+            {postElements}
         </div>
     );
 };
