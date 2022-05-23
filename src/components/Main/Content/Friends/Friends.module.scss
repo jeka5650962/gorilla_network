@@ -1,0 +1,10 @@
+.friends {
+    border-radius: 15px;
+    border: 1px solid #3c424b;
+    overflow: hidden;
+    &__body {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+}
