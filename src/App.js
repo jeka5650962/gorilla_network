@@ -10,9 +10,9 @@ const App = (props) => {
             <div className="container">
                 <Header/>
                 <Main
-                    messagingPersonData={props.messagingPersonData}
-                    messagingMessageData={props.messagingMessageData}
-                    postData={props.postData}
+                    messagingPersonData={props.state.messagingPersonData}
+                    messagingMessageData={props.state.messagingMessageData}
+                    postData={props.state.postData}
                 />
                 <Footer/>
             </div>
