@@ -6,13 +6,13 @@
     &__row {
         display: flex;
         flex-wrap: wrap;
-        margin: 0 -10px;
+        margin: 0 -5px;
     }
     &__column {
         flex: 0 1 33.333%;
-        padding: 0 10px;
+        padding: 0 5px;
         display: flex;
-        margin: 0 0 20px 0;
+        margin: 0 0 10px 0;
         &:last-child {
             margin: 0;
         }
@@ -23,18 +23,28 @@
         border: 1px solid #3c424b;
         border-radius: 15px;
         background-color: #161b22;
-        min-height: 400px;
+        min-height: 370px;
         min-width: 100%;
+        overflow: hidden;
     }
     &__image {
-        img {}
+        height: 100px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
     &__photo {
-        flex: 0 0 60px;
+        flex: 0 0 100px;
         align-self: flex-start;
         border-radius: 50%;
         overflow: hidden;
-        margin: 0 20px;
+        margin: 0 20px -20px 20px;
+        position: relative;
+        top: -40px;
+        left: 0;
         img {
             height: 100%;
         }
@@ -61,7 +71,7 @@
         height: 30px;
         color: #fff;
         background-color: #3c424b;
-        font-size: 16px;
+        font-size: 14px;
         transition: background-color 0.3s ease 0s;
         &:hover {
             background-color: #599650;
