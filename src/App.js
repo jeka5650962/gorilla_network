@@ -10,6 +10,7 @@ const App = (props) => {
             <div className="container">
                 <Header/>
                 <Main
+                    friendsItemData={props.state.friendsItemData}
                     messagingPersonData={props.state.messagingPersonData}
                     messagingMessageData={props.state.messagingMessageData}
                     postData={props.state.postData}

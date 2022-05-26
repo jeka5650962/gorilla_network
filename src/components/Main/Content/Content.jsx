@@ -23,7 +23,11 @@ const Content = (props) => {
                             messagingMessageData={props.messagingMessageData}
                         />
                     }/>
-                    <Route path="/friends" element={<Friends/>}/>
+                    <Route path="/friends" element={
+                        <Friends
+                            friendsItemData={props.friendsItemData}
+                        />
+                    }/>
                     <Route path="/news" element={<News/>}/>
                     <Route path="/music" element={<Music/>}/>
                 </Routes>

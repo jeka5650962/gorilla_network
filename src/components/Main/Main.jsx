@@ -10,6 +10,7 @@ const Main = (props) => {
             <main className={style.main}>
                 <Sidebar/>
                 <Content
+                    friendsItemData={props.friendsItemData}
                     messagingPersonData={props.messagingPersonData}
                     messagingMessageData={props.messagingMessageData}
                     postData={props.postData}
