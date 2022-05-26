@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./Profile.module.scss";
 import AddPost from "./AddPost/AddPost";
-import Post from "./Posts/Post";
+import Post from "./Post/Post";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = (props) => {
