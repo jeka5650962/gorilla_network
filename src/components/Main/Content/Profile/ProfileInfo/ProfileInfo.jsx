@@ -3,6 +3,7 @@ import style from "./ProfileInfo.module.scss";
 import avaImg from "./images/ava.jpg";
 
 const ProfileInfo = () => {
+
     return (
         <div className={style.profile}>
             <div className={style.profile__image}></div>
