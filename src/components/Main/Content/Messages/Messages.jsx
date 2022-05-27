@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useRef} from "react";
 import style from "./Messages.module.scss";
 import MessagingPerson from "./MessagingPerson/MessagingPerson";
 import MessagingMessage from "./MessagingMessage/MessagingMessage";
 
 const Messages = (props) => {
+
+    /* ------------------------------------------------------------------------------------ метод map */
 
     let messagingPersonElements = props.messagingPersonData.map(mpd =>
         <MessagingPerson
@@ -12,12 +14,25 @@ const Messages = (props) => {
             date={mpd.date}
             urlPhoto={mpd.urlPhoto}
             lastMessage={mpd.lastMessage}
-        />);
+        />
+    );
 
     let messagingMessageElements = props.messagingMessageData.map(mmd =>
         <MessagingMessage
             message={mmd.message}
-        />);
+        />
+    );
+
+    /* ----------------------------------------------------------------------------------- addMessage */
+
+    let newMessageElement = useRef(null);
+
+    let addMessage = () => {
+        let text = newMessageElement.current.value;
+        alert(text);
+    };
+
+    /* --------------------------------------------------------------------------------------- return */
 
     return (
         <div className={style.messages}>
@@ -33,9 +48,9 @@ const Messages = (props) => {
                         </div>
                         <div className={style.message__writeMessage}>
                             <div className={style.message__textarea}>
-                                <textarea name="text"></textarea>
+                                <textarea ref={newMessageElement} name="text"></textarea>
                             </div>
-                            <a href="#" className={style.message__button}>Send</a>
+                            <a href="#" onClick={addMessage} className={style.message__button}>Send</a>
                         </div>
                     </div>
                 </div>

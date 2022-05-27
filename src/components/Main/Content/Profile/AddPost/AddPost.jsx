@@ -3,12 +3,16 @@ import style from "./AddPost.module.scss";
 
 const AddPost = () => {
 
+    /* -------------------------------------------------------------------------------------- addPost */
+
+    let newPostElement = useRef(null);
+
     let addPost = () => {
         let text = newPostElement.current.value;
         alert(text);
     };
 
-    let newPostElement = useRef(null);
+    /* --------------------------------------------------------------------------------------- return */
 
     return (
         <div className={style.addPost}>
