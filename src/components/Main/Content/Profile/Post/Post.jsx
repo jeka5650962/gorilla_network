@@ -1,17 +1,25 @@
 import React from "react";
 import style from "./Post.module.scss";
-import MessageProfile from "./MessageProfile/MessageProfile";
-import Likes from "./Likes/Likes";
-import PostProfileInfo from "./PostProfileInfo/PostProfileInfo";
+import avaImg from "../ProfileInfo/images/ava.jpg";
 
 // ----------------------------------------------------------------------------------------------------- компонента Post
 const Post = (props) => {
     return (
         <div className={style.post}>
-            <PostProfileInfo/>
+            <div className={`${style.post__profileInfo} ${style.profileInfo}`}>
+                <div className={style.profileInfo__photo}><img src={avaImg} alt="Avatar"/></div>
+                <div className={style.profileInfo__text}>
+                    <div className={style.profileInfo__name}>Yauheni Salish</div>
+                    <div className={style.profileInfo__description}>Looking for an opening React JS Developer</div>
+                </div>
+            </div>
             <div className={`${style.post__profileMessage} ${style.profileMessage}`}>
-                <MessageProfile postMessage={props.postMessage}/>
-                <Likes likesCount={props.likesCount}/>
+                <div className={style.profileMessage__text}>
+                    <p>{props.postMessage}</p>
+                </div>
+                <div className={style.profileMessage__likes}>
+                    <span>{props.likesCount}</span>
+                </div>
             </div>
         </div>
     );
