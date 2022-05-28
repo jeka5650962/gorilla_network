@@ -6,11 +6,15 @@ import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = (props) => {
 
+    /* ------------------------------------------------------------------------------------ метод map */
+
     let postElements = props.postData.map(pd =>
         <Post
             postMessage={pd.postMessage}
             likesCount={pd.likesCount}
         />)
+
+    /* --------------------------------------------------------------------------------------- return */
 
     return (
         <div className={style.profileWrapper}>

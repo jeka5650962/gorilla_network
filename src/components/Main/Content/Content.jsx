@@ -4,8 +4,6 @@ import {Routes, Route} from "react-router-dom";
 import Profile from "./Profile/Profile";
 import Messages from "./Messages/Messages";
 import Friends from "./Friends/Friends";
-import News from "./News/News";
-import Music from "./Music/Music";
 
 const Content = (props) => {
     return (
@@ -28,8 +26,6 @@ const Content = (props) => {
                             friendsItemData={props.friendsItemData}
                         />
                     }/>
-                    <Route path="/news" element={<News/>}/>
-                    <Route path="/music" element={<Music/>}/>
                 </Routes>
             </div>
         </section>

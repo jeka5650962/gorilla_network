@@ -2,7 +2,6 @@ import React from "react";
 import style from "./Post.module.scss";
 import avaImg from "../ProfileInfo/images/ava.jpg";
 
-// ----------------------------------------------------------------------------------------------------- компонента Post
 const Post = (props) => {
     return (
         <div className={style.post}>

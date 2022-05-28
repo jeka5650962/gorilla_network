@@ -82,4 +82,12 @@ let state = {
     ],
 };
 
+export let addPost = (postMessage) => {
+    let newPost = {
+        postMessage: postMessage,
+        likesCount: 0,
+    };
+    state.postData.push(newPost);
+};
+
 export default state;
