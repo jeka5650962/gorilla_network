@@ -1,3 +1,5 @@
+import {rerenderEntireTree} from "../render";
+
 let state = {
     friendsItemData: [
         {
@@ -82,12 +84,25 @@ let state = {
     ],
 };
 
+/* ------------------------------------------------------------------------------------------------- добавление поста */
+
 export let addPost = (postMessage) => {
     let newPost = {
         postMessage: postMessage,
         likesCount: 0,
     };
     state.postData.push(newPost);
+    rerenderEntireTree(state);
+};
+
+/* --------------------------------------------------------------------------------------------- добавление сообщения */
+
+export let addMessage = (messageText) => {
+    let newMessage = {
+        message: messageText,
+    };
+    state.messagingMessageData.push(newMessage);
+    rerenderEntireTree(state);
 };
 
 export default state;

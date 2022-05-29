@@ -14,6 +14,8 @@ const Main = (props) => {
                     messagingPersonData={props.messagingPersonData}
                     messagingMessageData={props.messagingMessageData}
                     postData={props.postData}
+                    addPost={props.addPost}
+                    addMessage={props.addMessage}
                 />
             </main>
         </Router>

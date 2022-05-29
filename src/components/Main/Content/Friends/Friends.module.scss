@@ -29,6 +29,10 @@
         min-height: 370px;
         min-width: 100%;
         overflow: hidden;
+        transition: border 0.3s ease 0s;
+        &:hover {
+            border: 1px solid #599650;
+        }
     }
     &__image {
         height: 100px;

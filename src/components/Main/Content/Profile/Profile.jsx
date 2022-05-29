@@ -19,7 +19,9 @@ const Profile = (props) => {
     return (
         <div className={style.profileWrapper}>
             <ProfileInfo/>
-            <AddPost/>
+            <AddPost
+                addPost={props.addPost}
+            />
             {postElements}
         </div>
     );

@@ -1,7 +1,7 @@
 import React, {useRef} from "react";
 import style from "./AddPost.module.scss";
 
-const AddPost = () => {
+const AddPost = (props) => {
 
     /* -------------------------------------------------------------------------------------- addPost */
 
@@ -9,7 +9,7 @@ const AddPost = () => {
 
     let addPost = () => {
         let text = newPostElement.current.value;
-        alert(text);
+        props.addPost(text);
     };
 
     /* --------------------------------------------------------------------------------------- return */
