@@ -5,7 +5,7 @@ import MessagingMessage from "./MessagingMessage/MessagingMessage";
 
 const Messages = (props) => {
 
-    /* ------------------------------------------------------------------------------------ метод map */
+    /* ---------------------------------------------------------------------------------------------------- метод map */
 
     let messagingPersonElements = props.messagingPersonData.map(mpd =>
         <MessagingPerson
@@ -23,7 +23,7 @@ const Messages = (props) => {
         />
     );
 
-    /* ----------------------------------------------------------------------------------- addMessage */
+    /* ----------------------------------------------------------------------------------------- добавление сообщения */
 
     let newMessageElement = useRef(null);
 
@@ -32,7 +32,7 @@ const Messages = (props) => {
         props.addMessage(text);
     };
 
-    /* --------------------------------------------------------------------------------------- return */
+    /* ------------------------------------------------------------------------------------------------------- return */
 
     return (
         <div className={style.messages}>
@@ -50,7 +50,7 @@ const Messages = (props) => {
                             <div className={style.message__textarea}>
                                 <textarea ref={newMessageElement} name="text"></textarea>
                             </div>
-                            <a href="#" onClick={addMessage} className={style.message__button}>Send</a>
+                            <button onClick={addMessage} className={style.message__button}>Send</button>
                         </div>
                     </div>
                 </div>
