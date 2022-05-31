@@ -1,4 +1,6 @@
-import {rerenderEntireTree} from "../render";
+let rerenderEntireTree = () => {
+    console.log('State is changed');
+};
 
 let state = {
     friendsItemData: [
@@ -88,7 +90,7 @@ let state = {
 
 /* ------------------------------------------------------------------------------------------------- добавление поста */
 
-export let addPost = () => {
+export const addPost = () => {
     let newPost = {
         postMessage: state.newPostText,
         likesCount: 0,
@@ -100,14 +102,14 @@ export let addPost = () => {
 
 /* ------------------------------------------------------------------------------------------------ updateNewPostText */
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
     state.newPostText = newText;
     rerenderEntireTree(state);
 };
 
 /* --------------------------------------------------------------------------------------------- добавление сообщения */
 
-export let addMessage = () => {
+export const addMessage = () => {
     let newMessage = {
         message: state.newMessageText,
     };
@@ -118,9 +120,15 @@ export let addMessage = () => {
 
 /* --------------------------------------------------------------------------------------------- updateNewMessageText */
 
-export let updateNewMessageText = (newText) => {
+export const updateNewMessageText = (newText) => {
     state.newMessageText = newText;
     rerenderEntireTree(state);
+};
+
+/* -------------------------------------------------------------------------------------------------------- subscribe */
+
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer;
 };
 
 export default state;
