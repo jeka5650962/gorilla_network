@@ -8,8 +8,15 @@ const AddPost = (props) => {
     let newPostElement = useRef(null);
 
     let addPost = () => {
+        props.addPost();
+        props.updateNewPostText('');
+    };
+
+    /* ------------------------------------------------------------------------------------------------- onPostChange */
+
+    let onPostChange = () => {
         let text = newPostElement.current.value;
-        props.addPost(text);
+        props.updateNewPostText(text);
     };
 
     /* ------------------------------------------------------------------------------------------------------- return */
@@ -20,7 +27,7 @@ const AddPost = (props) => {
                 Add new post
             </div>
             <div className={style.addPost__area}>
-                <textarea ref={newPostElement} name="text"></textarea>
+                <textarea ref={newPostElement} onChange={onPostChange} value={props.newPostText}/>
             </div>
             <button onClick={addPost} className={style.addPost__button}>Publish</button>
         </div>

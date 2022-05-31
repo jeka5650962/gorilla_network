@@ -82,26 +82,44 @@ let state = {
             likesCount: 8,
         },
     ],
+    newPostText: "Jeka Yauheni Salish",
+    newMessageText: "5. Sed ac facilisis ante. Ut viverra, massa ac facilisis sollicitudin.",
 };
 
 /* ------------------------------------------------------------------------------------------------- добавление поста */
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
     let newPost = {
-        postMessage: postMessage,
+        postMessage: state.newPostText,
         likesCount: 0,
     };
     state.postData.push(newPost);
+    state.newPostText = '';
+    rerenderEntireTree(state);
+};
+
+/* ------------------------------------------------------------------------------------------------ updateNewPostText */
+
+export let updateNewPostText = (newText) => {
+    state.newPostText = newText;
     rerenderEntireTree(state);
 };
 
 /* --------------------------------------------------------------------------------------------- добавление сообщения */
 
-export let addMessage = (messageText) => {
+export let addMessage = () => {
     let newMessage = {
-        message: messageText,
+        message: state.newMessageText,
     };
     state.messagingMessageData.push(newMessage);
+    state.newMessageText = '';
+    rerenderEntireTree(state);
+};
+
+/* --------------------------------------------------------------------------------------------- updateNewMessageText */
+
+export let updateNewMessageText = (newText) => {
+    state.newMessageText = newText;
     rerenderEntireTree(state);
 };
 

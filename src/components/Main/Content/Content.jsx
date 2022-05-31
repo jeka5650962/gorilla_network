@@ -14,6 +14,8 @@ const Content = (props) => {
                         <Profile
                             postData={props.postData}
                             addPost={props.addPost}
+                            newPostText={props.newPostText}
+                            updateNewPostText={props.updateNewPostText}
                         />
                     }/>
                     <Route path="/messages/*" element={
@@ -21,6 +23,8 @@ const Content = (props) => {
                             messagingPersonData={props.messagingPersonData}
                             messagingMessageData={props.messagingMessageData}
                             addMessage={props.addMessage}
+                            newMessageText={props.newMessageText}
+                            updateNewMessageText={props.updateNewMessageText}
                         />
                     }/>
                     <Route path="/friends" element={

@@ -16,6 +16,10 @@ const App = (props) => {
                     postData={props.state.postData}
                     addPost={props.addPost}
                     addMessage={props.addMessage}
+                    newPostText={props.state.newPostText}
+                    updateNewPostText={props.updateNewPostText}
+                    newMessageText={props.state.newMessageText}
+                    updateNewMessageText={props.updateNewMessageText}
                 />
                 <Footer/>
             </div>

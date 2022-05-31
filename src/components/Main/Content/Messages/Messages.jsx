@@ -23,13 +23,20 @@ const Messages = (props) => {
         />
     );
 
-    /* ----------------------------------------------------------------------------------------- добавление сообщения */
+    /* --------------------------------------------------------------------------------------------------- addMessage */
 
     let newMessageElement = useRef(null);
 
     let addMessage = () => {
+        props.addMessage();
+        props.updateNewMessageText('');
+    };
+
+    /* ---------------------------------------------------------------------------------------------- onMessageChange */
+
+    let onMessageChange = () => {
         let text = newMessageElement.current.value;
-        props.addMessage(text);
+        props.updateNewMessageText(text);
     };
 
     /* ------------------------------------------------------------------------------------------------------- return */
@@ -48,7 +55,7 @@ const Messages = (props) => {
                         </div>
                         <div className={style.message__writeMessage}>
                             <div className={style.message__textarea}>
-                                <textarea ref={newMessageElement} name="text"></textarea>
+                                <textarea ref={newMessageElement} onChange={onMessageChange} value={props.newMessageText}/>
                             </div>
                             <button onClick={addMessage} className={style.message__button}>Send</button>
                         </div>

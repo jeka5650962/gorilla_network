@@ -14,6 +14,10 @@ const Main = (props) => {
                 postData={props.postData}
                 addPost={props.addPost}
                 addMessage={props.addMessage}
+                newPostText={props.newPostText}
+                updateNewPostText={props.updateNewPostText}
+                newMessageText={props.newMessageText}
+                updateNewMessageText={props.updateNewMessageText}
             />
         </main>
     );
