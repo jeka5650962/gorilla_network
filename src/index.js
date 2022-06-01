@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import './index.scss';
 import App from './App';
@@ -7,18 +7,20 @@ import state, {subscribe} from "./redux/state";
 import {BrowserRouter} from "react-router-dom";
 import {addMessage, addPost, updateNewMessageText, updateNewPostText} from "./redux/state";
 
-let rerenderEntireTree = (state) => {
-    ReactDOM.render(
-        <BrowserRouter>
-            <App
-                state={state}
-                addPost={addPost}
-                addMessage={addMessage}
-                updateNewPostText={updateNewPostText}
-                updateNewMessageText={updateNewMessageText}
-            />
-        </BrowserRouter>,
-        document.getElementById('root')
+export let rerenderEntireTree = (state) => {
+    const root = createRoot(document.getElementById('root'));
+    root.render(
+        <React.StrictMode>
+            <BrowserRouter>
+                <App
+                    state={state}
+                    addPost={addPost}
+                    addMessage={addMessage}
+                    updateNewPostText={updateNewPostText}
+                    updateNewMessageText={updateNewMessageText}
+                />
+            </BrowserRouter>
+        </React.StrictMode>
     );
 };
 
