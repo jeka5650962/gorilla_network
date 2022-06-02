@@ -7,8 +7,8 @@ import state, {subscribe} from "./redux/state";
 import {BrowserRouter} from "react-router-dom";
 import {addMessage, addPost, updateNewMessageText, updateNewPostText} from "./redux/state";
 
-export let rerenderEntireTree = (state) => {
-    const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+let rerenderApp = (state) => {
     root.render(
         <React.StrictMode>
             <BrowserRouter>
@@ -24,9 +24,9 @@ export let rerenderEntireTree = (state) => {
     );
 };
 
-rerenderEntireTree(state);
+rerenderApp(state);
 
-subscribe(rerenderEntireTree);
+subscribe(rerenderApp);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
