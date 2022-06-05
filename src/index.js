@@ -3,9 +3,8 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import './index.scss';
 import App from './App';
-import state, {subscribe} from "./redux/state";
 import {BrowserRouter} from "react-router-dom";
-import {addMessage, addPost, updateNewMessageText, updateNewPostText} from "./redux/state";
+import store from "./redux/state";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 let rerenderApp = (state) => {
@@ -14,19 +13,19 @@ let rerenderApp = (state) => {
             <BrowserRouter>
                 <App
                     state={state}
-                    addPost={addPost}
-                    addMessage={addMessage}
-                    updateNewPostText={updateNewPostText}
-                    updateNewMessageText={updateNewMessageText}
+                    addPost={store.addPost.bind(store)}
+                    addMessage={store.addMessage.bind(store)}
+                    updateNewPostText={store.updateNewPostText.bind(store)}
+                    updateNewMessageText={store.updateNewMessageText.bind(store)}
                 />
             </BrowserRouter>
         </React.StrictMode>
     );
 };
 
-rerenderApp(state);
+rerenderApp(store.getState());
 
-subscribe(rerenderApp);
+store.subscribe(rerenderApp);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
