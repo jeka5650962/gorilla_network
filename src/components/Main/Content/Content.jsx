@@ -13,18 +13,16 @@ const Content = (props) => {
                     <Route path="/profile" element={
                         <Profile
                             postData={props.postData}
-                            addPost={props.addPost}
                             newPostText={props.newPostText}
-                            updateNewPostText={props.updateNewPostText}
+                            dispatch={props.dispatch}
                         />
                     }/>
                     <Route path="/messages/*" element={
                         <Messages
                             messagingPersonData={props.messagingPersonData}
                             messagingMessageData={props.messagingMessageData}
-                            addMessage={props.addMessage}
                             newMessageText={props.newMessageText}
-                            updateNewMessageText={props.updateNewMessageText}
+                            dispatch={props.dispatch}
                         />
                     }/>
                     <Route path="/friends" element={

@@ -14,12 +14,9 @@ const App = (props) => {
                     messagingPersonData={props.state.messagingPersonData}
                     messagingMessageData={props.state.messagingMessageData}
                     postData={props.state.postData}
-                    addPost={props.addPost}
-                    addMessage={props.addMessage}
                     newPostText={props.state.newPostText}
-                    updateNewPostText={props.updateNewPostText}
                     newMessageText={props.state.newMessageText}
-                    updateNewMessageText={props.updateNewMessageText}
+                    dispatch={props.dispatch}
                 />
                 <Footer/>
             </div>

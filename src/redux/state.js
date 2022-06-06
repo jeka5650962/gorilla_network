@@ -79,25 +79,17 @@ let store = {
         newPostText: "Jeka Yauheni Salish",
         newMessageText: "5. Sed ac facilisis ante. Ut viverra, massa ac facilisis sollicitudin.",
     },
-    getState() {
-        return this._state;
-    },
     _callSubscriber() {
         console.log('State is changed');
     },
-    addPost() {
-        let newPost = {
-            postMessage: this._state.newPostText,
-            likesCount: 0,
-        };
-        this._state.postData.push(newPost);
-        this._state.newPostText = '';
-        this._callSubscriber(this._state);
+
+    getState() {
+        return this._state;
     },
-    updateNewPostText(newText) {
-        this._state.newPostText = newText;
-        this._callSubscriber(this._state);
+    subscribe(observer) {
+        this._callSubscriber = observer;
     },
+
     addMessage() {
         let newMessage = {
             message: this._state.newMessageText,
@@ -110,8 +102,30 @@ let store = {
         this._state.newMessageText = newText;
         this._callSubscriber(this._state);
     },
-    subscribe(observer) {
-        this._callSubscriber = observer;
+
+    dispatch(action) {
+        if (action.type === 'ADD-POST') {
+            let newPost = {
+                postMessage: this._state.newPostText,
+                likesCount: 0,
+            };
+            this._state.postData.push(newPost);
+            this._state.newPostText = '';
+            this._callSubscriber(this._state);
+        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+            this._state.newPostText = action.newText;
+            this._callSubscriber(this._state);
+        } else if (action.type === 'ADD-MESSAGE') {
+            let newMessage = {
+                message: this._state.newMessageText,
+            };
+            this._state.messagingMessageData.push(newMessage);
+            this._state.newMessageText = '';
+            this._callSubscriber(this._state);
+        } else if (action.type === 'UPDATE-NEW-MESSAGE-TEXT') {
+            this._state.newMessageText = action.newText;
+            this._callSubscriber(this._state);
+        }
     },
 };
 

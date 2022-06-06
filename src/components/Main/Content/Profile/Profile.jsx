@@ -20,9 +20,8 @@ const Profile = (props) => {
         <div className={style.profileWrapper}>
             <ProfileInfo/>
             <AddPost
-                addPost={props.addPost}
                 newPostText={props.newPostText}
-                updateNewPostText={props.updateNewPostText}
+                dispatch={props.dispatch}
             />
             {postElements}
         </div>
