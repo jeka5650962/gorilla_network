@@ -8,14 +8,14 @@ const AddPost = (props) => {
     let newPostElement = useRef(null);
 
     let addPost = () => {
-        props.dispatch({type: 'ADD-POST'});
+        props.dispatch( { type: 'ADD-POST' } );
     };
 
     /* ------------------------------------------------------------------------------------------------- onPostChange */
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        let action = {type: 'UPDATE-NEW-POST-TEXT', newText: text};
+        let action = { type: 'UPDATE-NEW-POST-TEXT', newText: text };
         props.dispatch(action);
     };
 

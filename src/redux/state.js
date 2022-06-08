@@ -103,6 +103,8 @@ let store = {
         this._callSubscriber(this._state);
     },
 
+    /* ------------------------------------------------------------------------------------------------- ↓ dispatch() */
+
     dispatch(action) {
         if (action.type === 'ADD-POST') {
             let newPost = {
@@ -127,6 +129,9 @@ let store = {
             this._callSubscriber(this._state);
         }
     },
+
+    /* ------------------------------------------------------------------------------------------------- ↑ dispatch() */
+
 };
 
 export default store;
