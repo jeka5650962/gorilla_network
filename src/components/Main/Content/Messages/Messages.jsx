@@ -2,6 +2,10 @@ import React, {useRef} from "react";
 import style from "./Messages.module.scss";
 import MessagingPerson from "./MessagingPerson/MessagingPerson";
 import MessagingMessage from "./MessagingMessage/MessagingMessage";
+import {
+    addMessageActionCreator,
+    updateNewMessageTextActionCreator
+} from "../../../../redux/state";
 
 const Messages = (props) => {
 
@@ -28,14 +32,14 @@ const Messages = (props) => {
     let newMessageElement = useRef(null);
 
     let addMessage = () => {
-        props.dispatch( { type: 'ADD-MESSAGE' } );
+        props.dispatch(addMessageActionCreator());
     };
 
     /* ---------------------------------------------------------------------------------------------- onMessageChange */
 
     let onMessageChange = () => {
         let text = newMessageElement.current.value;
-        let action = { type: 'UPDATE-NEW-MESSAGE-TEXT', newText: text };
+        let action = updateNewMessageTextActionCreator(text);
         props.dispatch(action);
     };
 
