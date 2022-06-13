@@ -2,10 +2,7 @@ import React, {useRef} from "react";
 import style from "./Messages.module.scss";
 import MessagingPerson from "./MessagingPerson/MessagingPerson";
 import MessagingMessage from "./MessagingMessage/MessagingMessage";
-import {
-    addMessageActionCreator,
-    updateNewMessageTextActionCreator
-} from "../../../../redux/state";
+import {addMessageActionCreator, updateNewMessageTextActionCreator} from "../../../../redux/messages-reducer";
 
 const Messages = (props) => {
 
@@ -59,7 +56,8 @@ const Messages = (props) => {
                         </div>
                         <div className={style.message__writeMessage}>
                             <div className={style.message__textarea}>
-                                <textarea ref={newMessageElement} onChange={onMessageChange} value={props.newMessageText}/>
+                                <textarea ref={newMessageElement} onChange={onMessageChange}
+                                          value={props.newMessageText}/>
                             </div>
                             <button onClick={addMessage} className={style.message__button}>Send</button>
                         </div>
