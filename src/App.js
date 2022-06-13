@@ -10,12 +10,12 @@ const App = (props) => {
             <div className="container">
                 <Header/>
                 <Main
-                    friendsItemData={props.state.friendsItemData}
-                    messagingPersonData={props.state.messagingPersonData}
-                    messagingMessageData={props.state.messagingMessageData}
-                    postData={props.state.postData}
-                    newPostText={props.state.newPostText}
-                    newMessageText={props.state.newMessageText}
+                    friendsItemData={props.state.friendsPage.friendsItemData}
+                    messagingPersonData={props.state.messagesPage.messagingPersonData}
+                    messagingMessageData={props.state.messagesPage.messagingMessageData}
+                    postData={props.state.profilePage.postData}
+                    newPostText={props.state.profilePage.newPostText}
+                    newMessageText={props.state.messagesPage.newMessageText}
                     dispatch={props.dispatch}
                 />
                 <Footer/>
