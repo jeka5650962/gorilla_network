@@ -4,7 +4,7 @@ import reportWebVitals from './reportWebVitals';
 import './index.scss';
 import App from './App';
 import {BrowserRouter} from "react-router-dom";
-import store from "./redux/store";
+import store from "./redux/redux-store";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 let rerenderApp = (state) => {
@@ -22,7 +22,10 @@ let rerenderApp = (state) => {
 
 rerenderApp(store.getState());
 
-store.subscribe(rerenderApp);
+store.subscribe(() => {
+    let state = store.getState();
+    rerenderApp(state);
+});
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

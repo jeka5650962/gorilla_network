@@ -15,7 +15,7 @@ let store = {
                     likesCount: 2022,
                 },
             ],
-            newPostText: "Jeka Yauheni Salish",
+            newPostText: "",
         },
         messagesPage: {
             messagingPersonData: [
@@ -48,7 +48,7 @@ let store = {
                     message: "4. Suspendisse mattis commodo dignissim. Quisque consequat leo aliquet ex hendrerit, quis vehicula lectus gravida. Aliquam.",
                 },
             ],
-            newMessageText: "5. Sed ac facilisis ante. Ut viverra, massa ac facilisis sollicitudin.",
+            newMessageText: "",
         },
         friendsPage: {
             friendsItemData: [
